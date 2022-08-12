@@ -13,37 +13,43 @@
         flex-direction: column;
         margin-left: 10px;
     }
-    label{
+    .label{
         display: flex;
         flex-direction: column;
     }
     #a,#b,#c,#d{
         display: inline-flex;
         margin-left: 5%;
-        width: 300px;
+        max-width: 280px;
         height: 80px;
         border-radius: 0px;
         border: none;
-        min-width: 100px;
+        width: 100%;
     }
     #e,#f{
+        justify-content: center;
+        width: auto;
         display: block;
     }
-    nav{
-        width: 100%;
-        height: 80px;
-        background-image: linear-gradient(90deg,rgba(1,175,209,1) 0%,rgba(52,220,227,1) 100%,rgba(1,175,209,1) 100%);
+    #z{
+        padding: 5px;
+        margin-left: 75%;
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(30deg,rgb(6, 138, 138),rgb(152, 255, 255));
+        border-radius: 15px;
+        margin-top: -750px;
     }
     form{
         border-radius: 15px;
-        padding: 50px;
+        padding: 20px;
         margin-top: 10px;
-        margin-left: 20%;
+        margin-left: 10%;
         width: 60%;
         height: auto;
         background-image: linear-gradient(rgb(152, 255, 255),rgb(6, 138, 138));
     }
-    #msg{
+    #msgs{
         padding: 3px;
         margin-left: 5%;
         width: 90%;
@@ -54,23 +60,11 @@
     #msgl{
         margin-left: 5%;
     }
-    #h1{
+    #h7{
         font-size: 50px;
     }
-    button{
+    #bn{
         background-image: radial-gradient(rgb(235, 235, 235),rgb(90, 90, 90));
-    }
-    ul,li,a{
-        display: inline;
-        font-size: 30px;
-        text-decoration: none;
-    }
-    ul{
-        text-align: right;
-    }
-    li{
-        margin-right: 25px;
-        background-position: 100%;
     }
 </style>
 <html>
@@ -79,38 +73,42 @@
     </head>
     <body>
         <nav>
+            <img src="logo2.png">
             <ul>
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">Meubles</a></li>
-                <li><a href="#">Elactro-Menager</a></li>
+                <li><a href="#">Electro-Menager</a></li>
                 <li>Contact</li>
             </ul>
         </nav>
         <form action="hand.php" method="post">
-            <center><h1 id="h1">Contact us</h1></center>
+            <center><h1 id="h7">Contact us</h1></center>
             <div id="e">
             <div id="a">
-                <label for="name"><b>Name</b></label><br>
+                <label for="name" class="label"><b>Name</b></label><br>
                 <input type="text" name="name" placeholder="Your name..." required>
             </div>
             <div id="b">
-                <label for="email"><b>Email</b></label><br>
+                <label for="email" class="label"><b>Email</b></label><br>
                 <input type="email" name="email" id="email" placeholder="Your email address..." required>
             </div>
             </div>
             <div id="f">
             <div id="c">
-                <label for="town"><b>Town</b></label><br/>
+                <label for="town" class="label"><b>Town</b></label><br/>
                 <input type="text" name="town" id="town" placeholder="Your town of residence..." required>
             </div>
             <div id="d">
-                <label for="phone"><b>Phone</b></label><br>
+                <label for="phone" class="label"><b>Phone</b></label><br>
                 <input type="tel" name="phone" placeholder="Your telephone number..." required>
             </div>
             </div>
-            <label for="msg" id="msgl"><b>Message</b></label>
-            <textarea name="msg" id="msg" placeholder="Please leave a message here..." required></textarea>
-            <center><button type="submit"><b>Send</b></button></center>
+            <label for="msg" id="msgl" class="label"><b>Message</b></label>
+            <textarea name="msg" id="msgs" placeholder="Please leave a message here..." required></textarea>
+            <center><button type="submit" id="bn"><b>Send</b></button></center>
         </form>
+        <div id="z">
+            <p>+237 693 949 991</p>
+        </div>
     </body>
 </html>
